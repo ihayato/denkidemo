@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>クリプトニンジャひかり</title>
+    <meta name="description" content="クリプトニンジャひかり公式ランディングページ（静的版）" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind = { config: {
+        theme: {
+          extend: {
+            colors: {
+              'light-bg': '#FFFFFF',
+              'light-surface': '#F8FAFC',
+              'light-text': '#1F2937',
+              'light-text-secondary': '#6B7280',
+              'light-border': '#E5E7EB',
+              'light-primary': '#3B82F6',
+              'light-accent': '#E11D48',
+              'light-accent-hover': '#BE123C'
+            },
+            fontFamily: {
+              sans: ['Noto Sans JP','sans-serif']
+            },
+            animation: { 'fade-in-up': 'fadeInUp 0.6s ease-out forwards' },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' }
+              }
+            }
+          }
+        }
+      }}
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .coin-animation { position:absolute; width:40px; height:40px; background:linear-gradient(135deg,#ffd700,#ffed4e); border-radius:50%; opacity:.3; animation: float 15s infinite ease-in-out; box-shadow:0 0 20px rgba(255,215,0,.4) }
+      .coin-1{ top:10%; left:5%; animation-delay:0s }
+      .coin-2{ top:20%; right:10%; animation-delay:3s; animation-duration:18s }
+      .coin-3{ bottom:30%; left:15%; animation-delay:6s; animation-duration:20s }
+      .coin-4{ bottom:15%; right:20%; animation-delay:9s; animation-duration:17s }
+      .coin-5{ top:50%; right:5%; animation-delay:12s; animation-duration:19s }
+      @keyframes float{0%,100%{transform:translateY(0) translateX(0) rotate(0)}25%{transform:translateY(-20px) translateX(10px) rotate(90deg)}50%{transform:translateY(10px) translateX(-10px) rotate(180deg)}75%{transform:translateY(-15px) translateX(15px) rotate(270deg)}}
+      @media (max-width:768px){ .coin-animation{ width:30px; height:30px } }
+
+      /* Timeline / Step badges */
+      .timeline-item{ position:relative; padding-left:3.75rem; margin-bottom:2rem; border-left:2px solid #E5E7EB }
+      .timeline-item:last-child{ margin-bottom:0 }
+      .step-badge{ position:absolute; left:-1.75rem; top:0; width:2.75rem; height:2.75rem; border-radius:9999px; display:flex; align-items:center; justify-content:center; font-weight:800; color:#fff; background:linear-gradient(135deg,#22d3ee,#3b82f6); box-shadow:0 12px 24px rgba(59,130,246,.35); border:4px solid #fff }
+      @media (min-width:768px){ .timeline-item{ padding-left:4.25rem } .step-badge{ left:-2rem; width:3rem; height:3rem } }
+    </style>
+  </head>
+  <body class="bg-light-bg text-light-text font-sans">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-light-bg/90 backdrop-blur-sm shadow-md">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="h-10 w-48 flex items-center">
+          <img src="img/logo_cryptoninja_hikari_1.webp" alt="クリプトニンジャひかり" class="object-contain object-left h-10" />
+        </div>
+        <a href="https://gmobb.jp/financie/cnh" class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-2 px-3 md:px-6 rounded-full shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300 transform hover:scale-105 hover:-translate-y-px whitespace-nowrap" style="font-size:clamp(.75rem,2.5vw,1rem)">今すぐ申し込む</a>
+      </div>
+    </header>
+
+    <main class="pt-20">
+      <!-- Hero -->
+      <section id="hero" class="bg-light-bg animate-fade-in-up">
+        <div class="w-full">
+          <div class="hidden md:block w-full relative" style="aspect-ratio:1920/882">
+            <img src="img/pcaohero.webp" alt="クリプトニンジャひかり" class="object-cover w-full h-full" />
+          </div>
+          <div class="block md:hidden w-full relative" style="aspect-ratio:750/1624">
+            <img src="img/iphoneaohero.webp" alt="クリプトニンジャひかり" class="object-cover w-full h-full" />
+          </div>
+        </div>
+        <div class="container mx-auto px-6 text-center py-12">
+          <a href="https://gmobb.jp/financie/cnh" class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg shadow-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">今すぐ申し込む</a>
+        </div>
+      </section>
+
+      <!-- Token Benefit -->
+      <section class="py-20 bg-gradient-to-b from-purple-50 via-blue-50 to-light-bg relative overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+          <div class="coin-animation coin-1"></div>
+          <div class="coin-animation coin-2"></div>
+          <div class="coin-animation coin-3"></div>
+          <div class="coin-animation coin-4"></div>
+          <div class="coin-animation coin-5"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+          <h2 class="text-3xl font-bold text-center mb-4">トークンがお得！</h2>
+          <div class="text-center text-light-text-secondary mb-12 max-w-3xl mx-auto">
+            <p class="hidden md:block">クリプトニンジャひかりを契約すると、毎月自動的にトークンが貯まります。<br>トークンは価値が変動し、日本円に換金することも可能です。</p>
+            <p class="md:hidden">クリプトニンジャひかりを契約すると、毎月自動的にトークンが貯まります。トークンは価値が変動し、日本円に換金することも可能です。</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition-transform duration-300 border-2 border-purple-100 text-center">
+              <div class="text-5xl mb-4">🪙</div>
+              <h3 class="text-xl font-bold mb-3">毎月自動で貯まる</h3>
+              <p class="text-light-text-secondary">月額料金の支払いごとに、トークンが自動的に付与されます。</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition-transform duration-300 border-2 border-purple-100 text-center">
+              <div class="text-5xl mb-4">📈</div>
+              <h3 class="text-xl font-bold mb-3">価値が変動する</h3>
+              <p class="text-light-text-secondary">トークンの価値は市場により変動します。将来的に価値が上がる可能性があります。</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg p-8 transform hover:scale-105 transition-transform duration-300 border-2 border-purple-100 text-center">
+              <div class="text-5xl mb-4">💴</div>
+              <h3 class="text-xl font-bold mb-3">日本円に換金可能</h3>
+              <p class="text-light-text-secondary">貯まったトークンは、日本円に換金することができます。</p>
+            </div>
+          </div>
+          <div class="mt-12 text-center">
+            <a href="https://financie.jp/communities/ninjadaoplus/market" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">現在の価値を確認する</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="py-20 bg-light-bg">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">5つのポイント</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center border border-light-border">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-light-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <h3 class="font-bold mb-2 text-xl">v6プラスの高速通信</h3>
+              <p class="text-light-text-secondary">高速通信が実現する「v6プラス」をオプション料0円で標準提供。</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center border border-light-border">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-light-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><text x="12" y="16" text-anchor="middle" font-size="20" font-weight="bold" fill="currentColor">¥</text></svg>
+              <h3 class="font-bold mb-2 text-xl">シンプルな料金プラン</h3>
+              <p class="text-light-text-secondary">基本工事費、回線利用料、プロバイダー利用料すべてがコミコミ。</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center border border-light-border">
+              <img src="img/awda.webp" alt="工事" class="w-10 h-10 mb-4" />
+              <h3 class="font-bold mb-2 text-xl">工事費実質無料</h3>
+              <p class="text-light-text-secondary">36ヵ月のご利用で最大26,400円相当の新規工事費が0円！<br>※土日祝工事費3,300円は対象外です。また工事内容によっては別途発生する場合がございます。</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center border border-light-border">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-light-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <h3 class="font-bold mb-2 text-xl"><span class="block md:inline">契約期間の縛りなし！</span><span class="block md:inline">解約違約金0円！</span></h3>
+              <p class="text-light-text-secondary">いつ解約しても解約違約金の請求はありません。<br>※工事費残債が残っている場合はご請求いたします。</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center transform hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center border border-light-border">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-light-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
+              <h3 class="font-bold mb-2" style="font-size:clamp(1rem,4.5vw,1.25rem)">厳選したWi‑Fiルーターが0円～！</h3>
+              <p class="text-light-text-secondary">1ギガプランは0円、10ギガプランは月額390円(税込)でレンタル可能です。1ギガプランは3年以上ご利用の場合、そのままプレゼントいたします。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="py-20 bg-light-surface">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">料金</h2>
+          <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden border border-light-border">
+              <table class="w-full">
+                <thead>
+                  <tr class="text-white">
+                    <th class="p-4 w-1/4 bg-light-primary/70"></th>
+                    <th class="p-4 text-center font-bold bg-light-primary whitespace-nowrap" style="font-size:clamp(1rem,3vw,1.25rem)">マンション</th>
+                    <th class="p-4 text-center font-bold bg-light-primary whitespace-nowrap" style="font-size:clamp(1rem,3vw,1.25rem)">ファミリー</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-t border-light-border">
+                    <td class="p-4 font-bold bg-light-surface text-center align-middle whitespace-nowrap" style="font-size:clamp(1rem,3vw,1.25rem)">1ギガ</td>
+                    <td class="p-4 text-center border-l border-light-border">
+                      <div class="py-4">
+                        <div><span class="text-4xl font-extrabold" id="price-mansion-raw">3750</span><span class="ml-1 text-lg font-medium text-light-text-secondary">円/月</span></div>
+                        <div class="text-sm text-light-text-secondary mt-1">(税込<span id="price-mansion-tax"></span>円/月)</div>
+                      </div>
+                    </td>
+                    <td class="p-4 text-center border-l border-light-border">
+                      <div class="py-4">
+                        <div><span class="text-4xl font-extrabold" id="price-family-raw">4900</span><span class="ml-1 text-lg font-medium text-light-text-secondary">円/月</span></div>
+                        <div class="text-sm text-light-text-secondary mt-1">(税込<span id="price-family-tax"></span>円/月)</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="border-t border-light-border">
+                    <td class="p-4 font-bold bg-light-surface text-center align-middle whitespace-nowrap" style="font-size:clamp(1rem,3vw,1.25rem)">10ギガ</td>
+                    <td class="p-4 text-center border-l border-light-border" colspan="2">
+                      <div class="py-4">
+                        <div><span class="text-4xl font-extrabold" id="price-10g-raw">5600</span><span class="ml-1 text-lg font-medium text-light-text-secondary">円/月</span></div>
+                        <div class="text-sm text-light-text-secondary mt-1">(税込<span id="price-10g-tax"></span>円/月)</div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="mt-4 text-center text-sm text-light-text-secondary whitespace-pre-line">※ 別途事務手数料3,300円（税込）が発生いたします。\n※ 開通月は月額利用料金の日割り計算でご利用日数分となります。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Area -->
+      <section id="area" class="py-20 bg-light-bg text-center">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold mb-4">提供エリア</h2>
+          <div class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 mb-6" style="font-size:clamp(1.5rem,4vw,3rem); line-height:1.3">
+            <p>フレッツ光と同エリアで</p>
+            <p>全国都道府県利用可能！</p>
+          </div>
+          <p class="md:hidden text-light-text-secondary max-w-2xl mx-auto px-4" style="font-size:clamp(.75rem,2.5vw,.875rem); line-height:1.5">※10ギガプランをご希望の場合、お申込ページ内下部に記載の提供エリアを必ずご確認ください。</p>
+          <p class="hidden md:block text-light-text-secondary max-w-2xl mx-auto">※10ギガプランをご希望の場合、<br>お申込ページ内下部に記載の提供エリアを必ずご確認ください。</p>
+        </div>
+      </section>
+
+      <!-- Flow (Tabs) -->
+      <section id="flow" class="py-20 bg-light-surface">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">ご利用開始までの流れ</h2>
+          <div class="max-w-3xl mx-auto">
+            <div class="flex justify-center mb-8 border-b border-light-border">
+              <button data-tab="0" class="tab-btn px-3 md:px-6 py-3 font-semibold text-sm md:text-lg border-b-2 border-light-primary text-light-primary">新規お申込みの方</button>
+              <button data-tab="1" class="tab-btn px-3 md:px-6 py-3 font-semibold text-sm md:text-lg text-light-text-secondary hover:text-light-primary">転用／事業者変更の方</button>
+            </div>
+            <div class="tab-panel" data-panel="0">
+              <div class="timeline-item"><div class="step-badge">1</div><div class="p-6 rounded-lg ml-2 bg-white shadow-sm"><h4 class="font-bold text-lg mb-1">WEBでお申込み</h4><div class="text-light-text-secondary">お申込み手続き内で工事の希望日をご指定いただけます。<br>お申込フォームは<a href="https://gmobb.jp/financie/cnh" target="_blank" class="text-blue-600 underline">こちら</a></div></div></div>
+              <div class="timeline-item"><div class="step-badge">2</div><div class="p-6 rounded-lg ml-2 bg-white shadow-sm"><h4 class="font-bold text-lg mb-1">FiNANCiE連携</h4><div class="text-light-text-secondary">お申込完了画面より、FiNANCiE連携手続きを行ってください。<br>FiNANCiEアカウントをお持ちでない場合は<a href="https://financie.jp/web_auth/signup" target="_blank" class="text-blue-600 underline">こちら</a>より事前に作成お願いします。<br>※FiNANCiE連携が行われていない場合、トークン購入が可能な限定FiNANCiEポイントの付与対象になりませんのでご注意ください。</div></div></div>
+              <div class="timeline-item"><div class="step-badge">3</div><div class="p-6 rounded-lg ml-2 bg-white shadow-sm"><h4 class="font-bold text-lg mb-1">工事日確定</h4><div class="text-light-text-secondary">2～3日以内に、GMOとくとくBBからメールで工事日確定のご連絡をいたします。<br>※クリプトニンジャひかりは「GMOとくとくBB」が提供しております。</div></div></div>
+              <div class="timeline-item"><div class="step-badge">4</div><div class="p-6 rounded-lg ml-2 bg-white shadow-sm"><h4 class="font-bold text-lg mb-1">Wi‑Fiルーター到着</h4><div class="text-light-text-secondary">工事予定日の約1週間前にルーターを発送いたします。</div></div></div>
+              <div class="timeline-item"><div class="step-badge">5</div><div class="p-6 rounded-lg ml-2 bg-white shadow-sm"><h4 class="font-bold text-lg mb-1">開通工事</h4><div class="text-light-text-secondary">宅内工事が必要な場合は工事担当者が設置先ご住所にお伺いします。<br>NTT側の工事のみの場合はお客さまのお立会いは不要です。<br>詳細はお申込完了後にメールにてご連絡いたします。</div></div></div>
+              <div class="timeline-item mb-0"><div class="step-badge">6</div><div class="p-6 rounded-lg ml-2 bg-white shadow-sm"><h4 class="font-bold text-lg mb-1">Wi‑Fiルーターの設置</h4><div class="text-light-text-secondary">工事が完了しましたらWi‑Fiルーターを接続して30分待つだけで設定完了です。</div></div></div>
+            </div>
+            <div class="tab-panel hidden" data-panel="1">
+              <div class="timeline-item"><div class="step-badge">1</div><div class="p-6 rounded-lg ml-2 bg-white shadow-sm"><h4 class="font-bold text-lg mb-1">承諾番号取得</h4><div class="text-light-text-secondary">フレッツ光をご利用中の方はNTT東日本・西日本から「転用承諾番号」を取得してください（無料）。有効期限は15日間です。<br>＜NTT東日本＞WEB: https://flets.com/app4/input/index/ ／ 電話: 0120-140-202<br>＜NTT西日本＞WEB: https://flets-w.com/collabo/tenyou/entry/ ／ 電話: 0120-533-104<br><br>コラボ光をご利用中の方は現在の事業者から「事業者変更承諾番号」を取得してください（有効期限15日）。</div></div></div>
+              <div class="timeline-item"><div class="step-badge">2</div><div class="p-6 rounded-lg ml-2 bg-white shadow-sm"><h4 class="font-bold text-lg mb-1">WEBでお申込み</h4><div class="text-light-text-secondary">お申込み手続き内で切替の希望日をご指定いただけます。<br>お申込フォームは<a href="https://gmobb.jp/financie/cnh" target="_blank" class="text-blue-600 underline">こちら</a></div></div></div>
+              <div class="timeline-item"><div class="step-badge">3</div><div class="p-6 rounded-lg ml-2 bg-white shadow-sm"><h4 class="font-bold text-lg mb-1">FiNANCiE連携</h4><div class="text-light-text-secondary">お申込完了画面より、FiNANCiE連携手続きを行ってください。<br>FiNANCiEアカウントをお持ちでない場合は<a href="https://financie.jp/web_auth/signup" target="_blank" class="text-blue-600 underline">こちら</a>より事前に作成お願いします。</div></div></div>
+              <div class="timeline-item"><div class="step-badge">4</div><div class="p-6 rounded-lg ml-2 bg-white shadow-sm"><h4 class="font-bold text-lg mb-1">Wi‑Fiルーター到着</h4><div class="text-light-text-secondary">工事予定日の約1週間前にルーターを発送いたします。</div></div></div>
+              <div class="timeline-item mb-0"><div class="step-badge">5</div><div class="p-6 rounded-lg ml-2 bg-white shadow-sm"><h4 class="font-bold text-lg mb-1">Wi‑Fiルーターの設置</h4><div class="text-light-text-secondary">ご自宅のNTT機器（ONU）とWi‑Fiルーターを接続して30分ほど待つだけで設定完了です。</div></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Options -->
+      <section id="options" class="py-20 bg-light-bg">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">オプションサービス</h2>
+          <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg border border-light-border flex flex-col gap-2">
+              <div class="flex justify-between items-center">
+                <h3 class="text-xl font-bold">GMOひかりテレビ</h3>
+                <p class="text-2xl font-bold text-light-accent"><span id="hikari-tv-price" data-old="825円/月" data-new="990円/月">825円/月</span></p>
+              </div>
+              <p class="text-light-text-secondary">アンテナ不要で地上/BSデジタル放送が受信できるサービスです。<br>※ 提供元がGMOとくとくBBのため、サービス名は「GMOひかりテレビ」になります。</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg border border-light-border">
+              <div class="flex justify-between items-center"><h3 class="text-xl font-bold">GMOひかり電話</h3><p class="text-2xl font-bold text-light-accent">550円/月～</p></div>
+              <p class="text-light-text-secondary mt-2">・一般加入電話よりおトクになるひかり電話がおすすめ<br>・NTT一般加入電話番号をお持ちの場合、現在お使いの電話番号、電話機がそのまま利用可能<br>※ 提供元がGMOとくとくBBのため、サービス名は「GMOひかり電話」になります。</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg border border-light-border">
+              <div class="flex justify-between items-center"><h3 class="text-xl font-bold">スカパー！</h3><p class="text-2xl font-bold text-light-accent">2,409円/月～</p></div>
+              <p class="text-light-text-secondary mt-2">・映画やスポーツ、専門性の高い多彩なジャンルの番組をお楽しみいただける映像サービス<br>・GMOひかりテレビとセットでのみお申込可<br>・スカパー！新規同時加入なら、テレビ接続工事料が無料</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg border border-light-border">
+              <div class="flex justify-between items-center"><h3 class="text-xl font-bold">リモートサポートサービス</h3><p class="text-2xl font-bold text-light-accent"></p></div>
+              <p class="text-light-text-secondary mt-2">・インターネット環境（PC・スマートフォン等）でのお困りごとを電話・遠隔操作でサポート<br>※ 提供元は、NTT東日本／NTT西日本になります。</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg border border-light-border">
+              <div class="flex justify-between items-center"><h3 class="text-xl font-bold">インターネット安心セキュリティ</h3><p class="text-2xl font-bold text-light-accent">550円/月</p></div>
+              <p class="text-light-text-secondary mt-2">・申込月含む最大3ヵ月無料<br>・ウイルス対策／スパイウェア対策／セキュリティ対策<br>・最大3台のパソコン・スマホに設定可能</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg border border-light-border">
+              <div class="flex justify-between items-center"><h3 class="text-xl font-bold">スマホトラブルサポート＋</h3><p class="text-2xl font-bold text-light-accent">1,078円/月</p></div>
+              <p class="text-light-text-secondary mt-2">・申込月含む最大2ヵ月無料<br>・スマホ/パソコンのトラブルはこれで安心！<br>・「AIクラウドバックアップサービス」「データ復旧安心サービス」「スマホ補償サービス」の3点セット<br>・スマホのデータを簡単にバックアップ！大事なデータの復旧、端末本体の故障や破損時は修理費用を最大50,000円サポート</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section id="cta-final" class="py-24 bg-light-surface text-center">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold mb-8">さあ、ニンジャの速さを手に入れよう。</h2>
+          <a href="https://gmobb.jp/financie/cnh" target="_blank" class="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-4 px-12 rounded-full text-xl shadow-lg shadow-blue-500/40 hover:shadow-2xl hover:shadow-blue-500/60 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">今すぐ申し込む</a>
+        </div>
+      </section>
+
+      <!-- FAQ (full) -->
+      <section id="faq" class="py-20 bg-light-bg">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">よくあるご質問</h2>
+          <div class="max-w-3xl mx-auto">
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold mb-6 border-l-4 border-light-primary pl-4">サービス</h3>
+              <div class="space-y-4">
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">GMOとくとくBBとは？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">GMOインターネット株式会社が運営するプロバイダーで、業界トップクラスの実績を持っています。クリプトニンジャひかりの通信回線は、「GMOとくとくBB」が提供する「GMO光アクセス（GMOとくとくBB光）」を利用しています。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">クリプトニンジャひかりの提供エリアは？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">クリプトニンジャひかりの提供エリアは、NTTフレッツ光（東日本・西日本）と同じです。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">どのような支払方法がありますか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">クレジットカード払いのみ対応しております。デビットカード、プリペイドカード、国外発行のクレジットカードはご利用いただけません。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">インターネットはいつから利用できるようになりますか</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">新規申込みでは最短2～3週間、転用・事業者変更では2週間程度です。エリアや状況によって異なります。繁忙期等によっては1～2ヶ月以上お時間をいただく可能性もあります。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">初期契約解除したい</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">初期契約解除は可能ですが、事務手数料3,300円（税込）は請求されます。Wi-Fiルーターが到着している場合は速やかに返却が必要です。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">解約する方法は？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">解約はお申込完了後にログイン可能になる、BBnavi（マイページ）から可能です。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">「転用」・「事業者変更」とは何ですか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">転用はフレッツ光から、事業者変更は光コラボ事業者間の契約変更です。現在ご利用中のNTT機器（ONU等）はそのままご利用いただけます。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">乗り換え（転用・事業者変更）に伴い、名義変更は可能か。</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">転用／事業者変更手続きと同時に名義変更はできません。変更されたい場合は現在の事業者様で変更いただいた上で、お申込みお願いします。</div></details>
+              </div>
+            </div>
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold mb-6 border-l-4 border-light-primary pl-4">手続き</h3>
+              <div class="space-y-4">
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">何歳から申し込めますか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">18歳以上からお申込み可能です。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">まだ契約希望の住所が決まっていないのですが申込み可能ですか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">住所未定の場合、お申込みは承れません。住所確定後にお申込みください。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">転居前でも申し込めますか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">お申込み可能です。転居先ご住所と転居日が確定した後にお申込みください。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">プロバイダも別途契約する必要ありますか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">クリプトニンジャひかりは、プロバイダもセットの契約です。なお、プロバイダは「GMOとくとくBB」になります。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">引越し先でも継続して利用する手続きの方法は？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">お客さま自身でBBnavi（マイページ）から移転手続きを行ってください。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">申込後のキャンセルは可能ですか。</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">原則、工事日4日前までにご連絡いただければ可能です。</div></details>
+              </div>
+            </div>
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold mb-6 border-l-4 border-light-primary pl-4">工事</h3>
+              <div class="space-y-4">
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">工事は必要ですか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">過去のご利用歴や物理的な設備があっても、現在ご契約のない光回線を利用できるようにするお手続きを含め「開通工事」と称します。開通工事には、現地訪問をする派遣工事と、訪問不要の局内作業のみの無派遣工事の2種類があります。既に光コンセントなど、設備がある場合は無派遣工事となる可能性は上がりますが、お申し込み後にNTTにて決定します。※ 設備がありましても派遣工事が必要と判断される場合もあります。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">工事費はいくらですか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">工事費は特典により割引となりますので実質無料です。ただし、土日祝日工事ご希望の場合は別途3,300円（税込）発生します。途中でご解約されますと残債分が発生いたします。また、お客さまの工事内容により別途工事料金が発生する場合もあります。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">工事日はいつわかりますか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">お申し込み後1週間以内にメールにてお知らせします。設備要因などにより後日変更のご連絡を差し上げる場合があります。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">立会が必要な場合、どのような工事を行いますか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">実際の工事内容は工事日当日に作業員が判断します。穴あけ、ビス止めなどを実施する場合は、事前にお客様へ実施可否を相談し、実施不可となった場合は費用負担なしでキャンセルが可能です。</div></details>
+              </div>
+            </div>
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold mb-6 border-l-4 border-light-primary pl-4">料金</h3>
+              <div class="space-y-4">
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">初期費用を教えてください</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">初期費用は事務手数料3,300円（税込）です。工事費は特典により割引となりますので実質無料です。ただし、土日祝日工事ご希望の場合は別途3,300円（税込）発生します。途中でご解約されますと残債分が発生いたします。また、お客さまの工事内容により別途工事料金が発生する場合もあります。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">クリプトニンジャひかり解約時に違約金は発生しますか</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">違約金はご請求いたしません。ただし、工事費の残債が残っている場合はご解約時に一括請求となります。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">毎月の料金の請求タイミングはいつですか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">ご利用月の翌月に請求が発生します。開通月の料金は翌々月請求となります。</div></details>
+              </div>
+            </div>
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold mb-6 border-l-4 border-light-primary pl-4">Wi‑Fiルーター</h3>
+              <div class="space-y-4">
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">Wi‑Fiルーターはいつ頃届きますか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">開通工事日の1週間前から前日までに設置先住所へお送りします。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">Wi‑Fiルーターの端末は選べますか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">選択できません。また、1ギガプランの無料レンタルWi‑Fiルーターはリファービッシュ（整備品）となります。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">レンタルWi‑Fiルーターが不要なのですがどうすればいいですか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">1G回線ご契約時はレンタルWi‑Fiルーターは規定によりレンタル必須です。36ヶ月以内に解約する場合は、必ずご返却をお願いします。返却送料につきましてはお客様ご負担となります。なお、37ヶ月以上ご利用いただければWi‑Fiルーターの返却は不要です。v6プラス対応のWi‑Fiルーターであればお客様にてご用意されたWi‑Fiルーターでもご利用可能です。ご利用のルーターが不調の際にも予備機としてご利用いただけるため、是非ご利用くださいませ。</div></details>
+              </div>
+            </div>
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold mb-6 border-l-4 border-light-primary pl-4">オプション</h3>
+              <div class="space-y-4">
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">フレッツ光のオプションを利用中ですが、クリプトニンジャひかりでも継続利用できますか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">NTTフレッツ光（東日本・西日本）で提供されるオプション（ひかり電話、ひかりテレビなど）は、クリプトニンジャひかりでも引き続き利用可能です。一部プラン・サービスを除きます。</div></details>
+                <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">開通後でもGMOひかり電話やGMOひかりテレビオプションの追加は可能ですか？</span><span>▼</span></summary><div class="p-5 text-light-text-secondary">開通後の追加も可能ですが、手数料や機器交換に伴う工事費などの追加料金が発生します。新規開通の場合は同時申込みがおすすめです。</div></details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Notes (full) -->
+      <section id="notes" class="py-20 bg-light-surface">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-center mb-12">注意事項</h2>
+          <div class="max-w-3xl mx-auto space-y-4">
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">クリプトニンジャひかりについて</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・クリプトニンジャひかりの通信回線は、「GMOとくとくBB」が提供する「GMO光アクセス（GMOとくとくBB光）」を利用しています。そのため、お申込後に送付される各種メールや書面、マイページ等に記載されるサービス名称はすべて「GMO光アクセス（GMOとくとくBB光）」になります。
+・開通月の翌月を1ヶ月目とした36ヶ月間を契約期間とさせていただいておりますが、契約期間内にご解約された場合でも解約違約金のご請求はございません。
+※派遣工事が発生したお客さまで、開通月の請求を１回目とした工事費分割割引期間中の解約の場合、工事費残回数分の請求をさせていただきます。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">GMO光アクセス（GMOとくとくBB光）から切替について</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・GMO光アクセス（GMOとくとくBB光）を廃止完了後に、新規でお申込ください。
+・GMO光アクセス（GMOとくとくBB光）からお乗り換えの場合も、派遣工事となる場合がございます。
+・GMO光アクセス（GMOとくとくBB光）で利用されているひかり電話の番号はクリプトニンジャひかりへ番号ポータビリティーできません。
+・GMOひかり電話、GMOひかりテレビをご契約中の場合でも、再度工事が必要となり、工事費も発生いたします。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">新規工事料実質無料について</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・基本工事費用は36回分割でのお支払いとなりますが、ご契約期間中は分割払い相当分を月額利用料金から値引きさせていだきます。派遣工事が発生したお客さまで、お支払いが完了する前に解約された場合は、解約月利用分の請求に含めて工事費の分割残債額を一括請求いたします。また、土日・祝日工事の追加工事費や工事内容によって発生する追加料金は実質無料特典の適用外です。別途事務手数料3,300円(税込)が発生します。
+基本工事費と分割支払い回数は以下の通りです。（ご契約期間中は分割払い相当分を月額料金から値引きします。）
+【ファミリー派遣工事有】26,400円（1回目990円/2回目～36回目 726円）
+【ファミリー派遣工事無】3,300円（1回目220円/2回目～36回目88円）
+【マンション派遣工事有】25,300円（1回目1,045円/2回目～36回目693円）
+【マンション派遣工事無】3,300円（1回目220円/2回目～36回目88円）</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">転用承諾番号について</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・転用でのお申込みの場合、承諾番号取得後5日以内にGMO光アクセスをお申し込みください。
+・転用承諾番号の有効期限は発行日から15日間です。有効期限を過ぎてしまった場合は無効となりますので、再度取得してください。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">他事業者から変更される場合（事業者変更手続き）</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・光コラボレーション事業者独自の電話サービスをご利用の場合、事業者変更にともなって電話番号が変わる場合があります。
+・NTTのオプションサービス「ひかり電話」、「フレッツ・テレビ」、「リモートサポートサービス」「ホームゲートウェイ」をご利用の場合は、「GMOひかり電話」、「GMOひかりテレビ」、「リモートサポートサービス」「ホームゲートウェイ」として継続してご利用いただくことができます。
+・光コラボレーション事業者独自のオプションサービスまたはNTTの提供するオプションサービスについて、利用条件が変更となる場合やサービスの全部もしくは一部がご利用いただけなくなる場合があります。
+・事業者変更後に「GMO光アクセス」を解約した場合、NTTの提供するオプションサービスも解約となります。
+・事業者変更完了後のキャンセルはできません。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">工事について</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・開通工事日はお申込み手続き内でお客さまのご希望日をご指定いただき、NTTに工事日取得の手続きを行います。
+・工事日程や内容については、通常お申込みから3日程度でメールにてご連絡いたしますので必ずご確認ください。
+・無派遣工事で手配させていただいた場合でも、宅内に光コンセントやモジュラージャック、LANポートがないことがございます。該当する際は工事内容を派遣工事に変更手配いたします。
+・工事日は変更できますが、開通工事はNTT工事枠に限りがあり、変更手続きを行うとご希望の新たな工事日が取得できない場合や、工事日が大幅に遅れる可能性があります。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">Wi‑Fiルーターレンタルサービスについて</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・Wi‑Fiルーターレンタルサービスは、GMOとくとくBBが提供するオプションサービスです。
+・1ギガWi‑Fiルーターは通常月額330円（税込）でのご提供ですが、GMO光アクセスをお申込みいただいた場合、月額0円のレンタルでご利用いただけます。なお、レンタルするルーターはリファービッシュ（整備品）です。
+・10ギガWi‑Fiルーターレンタルをお申込みの場合の月額レンタル料は毎月390円（税込）です。
+・本サービスのお申込み前にGMOとくとくBB「Wi‑Fiルーターレンタルサービス」サービス特約をご確認ください。
+・本サービスの適用は、GMOとくとくBBの会員お一人さまにつき、1回のみとします。
+・現在GMOとくとくBBのWi‑Fiルーターをご利用中の方は、継続して同じルーターをお使いください。
+・Wi‑Fiルーターのお届け先は、開通先住所となります。
+・配送状況については、出荷完了後、Wi‑Fiルーター申込み時にご登録いただいたメールアドレス宛にご連絡いたします。メールに記載のお問い合わせNo.を佐川急便ホームページにてご入力のうえ、ご確認ください。
+・お届けしたWi‑Fiルーターの開封は工事日以降にお願いいたします。
+・※GMO光アクセスの回線が開通前にキャンセルになった場合、お貸し出ししたWi‑Fiルーターは下記返送先にご返却ください。
+【Wi‑Fiルーター返送先】
+〒945-1352 新潟県柏崎市安田田尻工業団地7550-1 新進テック（株）内
+GMOとくとくBB 物流センター Wi‑Fiルーター返却係 宛
+※Wi‑Fiルーターの返送先住所は、Wi‑Fiルーターの出荷元と異なる住所のため、お間違いのないようご注意ください。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">Wi‑Fiルーターレンタルサービスのご利用料金について</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・「Wi‑Fiルーターレンタルサービス0円特典」は、GMOとくとくBBの光アクセスを1ギガで利用されているお客さまが対象となります。
+・GMO光アクセスを解約される際、GMOとくとくBBで他の基本接続サービスをご利用される場合、Wi‑Fiルーターレンタルサービスをご継続いただけます。ただし、GMO光アクセスのサービスを削除後、Wi‑Fiルーターレンタルサービスを継続利用される場合、月額330円（税込）を請求いたします。
+※GMO光アクセスを解約される際、GMOとくとくBBで他の基本接続サービスをご利用でない場合、Wi‑Fiルーターも自動的に解約となります。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">Wi‑Fiルーターの発送時期について</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・Wi‑Fiルーターは工事日までに順次発送いたします。
+・上記以外の場合は工事日から7営業日後を目途にお届け先へ発送いたします。（お客さまからの申込日や開通状況により発送が遅れる場合があります）
+※上記日程にてWi‑Fiルーターが届かないお客さまは、お手数ですが、GMOとくとくBBお客さまセンターへお問い合わせください。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">Wi‑Fiルーターレンタルサービスのご解約について</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・GMO光アクセスをご解約される際、GMOとくとくBBにてその他接続サービスをお持ちでない場合、GMO光アクセスの解約とともにWi‑Fiルーターレンタルサービスも同時に解約となります。
+・本サービス解約月の翌月20日必着にて、GMOとくとくBBが指定する方法にて、Wi‑Fiルーターをご返却ください。
+（GMO光アクセスと同時解約の場合、GMO光アクセス解約月の翌月20日必着。）
+・解約月の翌月20日までにWi‑Fiルーターの返却が確認できなかった場合、解約月翌々月に、端末損害金として10ギガは22,000円（税込）1ギガは11,000円（税込）をご請求いたします。期限を超過してご返却いただいた場合でも端末損害金の返金は行いません。
+・1ギガのWi‑Fiルーターレンタルサービスを端末発送月を含む37ヶ月間ご利用いただいた場合は、Wi‑Fiルーターの返却は不要です。
+・Wi‑Fiルーターのご返送に係る費用はお客さま負担にてお願いいたします。ご返却の際、Wi‑Fiルーターの付属品も合わせてご返却ください。・現在GMOとくとくBBのWi‑Fiルーターをご利用中の方は、継続して同じルーターをお使いください。
+【Wi‑Fiルーター返送先】
+〒945-1352 新潟県柏崎市安田田尻工業団地7550-1 新進テック（株）内
+GMOとくとくBB 物流センター Wi‑Fiルーター返却係 宛
+※Wi‑Fiルーターの返送先住所は、Wi‑Fiルーターの出荷元と異なる住所のため、お間違いのないようご注意ください。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">お申込みからご利用開始まで</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・本サービスのお申込みの際、フレッツ・v6オプションの代行申込を行います。また同オプションの開通工事のため、NTTご契約者さま情報が必要となります。
+※フレッツ・v6オプションは無料となります。月額料金、工事費は発生いたしません。ご利用上の注意事項については、NTT東日本及びNTT西日本のホームページにてご確認ください。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">初期契約解除について</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・本サービスは、初期契約解除制度の対象です。初期契約解除をされた場合、お客さまは違約金や損害賠償などを請求されることはございませんが事務手数料3,300円（税込）や既に工事が実施された場合の工事費は請求いたします。
+また、無料レンタルのWi‑Fiルーターが到着している場合は速やかにご返却ください。1ヶ月以内にご返却されない場合、端末損害金として10ギガは22,000円（税込）1ギガは11,000円（税込）をご請求いたします。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">サービスの品質について</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・本サービスはベストエフォート型のサービスです。記載の速度は、理論上の最大接続速度でありインターネットご利用時の通信速度を保証するものではありません。
+・ベストエフォート型とは、最大速度および接続性について保証せず、可能な場合にのみ最大限の速度、品質で提供することを前提に、安価に高速なサービスを提供する方法です。ページ内に記載されている速度は技術規格上の最大値であり、実使用速度を示すものではありません。インターネットご利用時の速度は、お客さまのご利用環境や回線の混雑状況等により、低下する場合があります。無線LAN機器をご利用する事により通信速度が遅くなる場合があります。
+・下り最大速度1Gbps／10Gbpsは、フレッツ 光ネクスト ハイスピードタイプ・フレッツ 光ネクスト スーパーハイスピードタイプ隼／フレッツ光クロス・フレッツ クロスの場合の技術規格上の最大速度です。お客さまのご利用環境や回線の状況等により、速度は低下する場合があります。
+・最大概ね100Mbpsを超える通信速度でご利用いただくためには、1Gbps／10Gbpsの通信速度に対応した環境（対応LANケーブル、パソコン端末等）が必要となります。
+・VDSL利用時等、一部最大1Gbpsの速度が出ない場合があります。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">ご利用いただけないサービスについて</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">「v6プラス」では一部利用できないサービスがあります。すでに利用中もしくは今後、サービスのご利用を予定している方は「v6プラス」はご利用いただけません。
+・固定IPサービス
+・特定のプロトコル（PPTP、SCTP）を利用するサービス
+・一部オンラインゲームなど、特定ポートを使用するサービス
+・IPv4グローバルアドレスを共有するネットワークでは利用できないサービス
+・利用可能なポート番号、ポート数に制限があるため、外部へサーバ公開をお考えの方はご利用できません。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">回線の引越し（移転）・移設・回線タイプの変更について</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・回線の引越し（移転）・移設・回線タイプの変更手続きにおいては回線工事費が発生します。
+・お申込み後に、工事日の日程などについてGMO光アクセス サポートセンターからお客さまへご連絡いたしますが、当社が定めた条件においてお客さまへご連絡が取れない場合は、お申込みをキャンセルします。
+・回線工事日当日または前日のキャンセルはできません。
+・お客さまのご利用環境によっては、ご希望の回線とならないことがあります。あらかじめご了承ください。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">解約手続き・契約期間について</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・毎月20日までの間に所定の解約申請もしくはサービスの一部解約をし、回線廃止手続きが完了してご解約となります。
+・契約期間の定めはございません。またどのタイミングでご解約された場合でも解約違約金のご請求はございません。
+・解約時に開通工事費の分割が残っている場合、回線廃止月以降に解約違約金（発生する場合）と合わせて残債を一括請求いたします。
+※派遣工事が発生したお客さまで、開通月の請求を１回目とした工事費分割割引期間中の解約の場合、工事費残回数分の請求をさせていただきます。
+・解約月も月額料金を含む全てのご料金がかかります（月の途中で解約されても料金の日割り計算は行いません）。また、回線廃止工事が完了するまで、GMO光アクセスの解約手続きも完了しません。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">解約完了までの流れ</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">解約完了となるタイミングは回線の廃止工事によって異なります。
+回線の廃止工事には「無派遣工事」と「派遣工事」の二通りの方法があり、お客さまのご利用環境によって、いずれかの工事となります。
+
+[A] 無派遣工事
+GMO光アクセス解約を申請された最短の月の下旬を目処にNTT局舎内で遠隔で実施します。
+別途NTTから送付される「回収キット」に従って、レンタル機器一式をご返却ください。
+なお、回線設備の撤去をご希望の場合、「GMO光アクセス サポートセンター」までご連絡ください。
+
+[B] 派遣工事
+お客さまのご利用場所に、工事業者を派遣し、回線設備の撤去を伴う廃止工事を実施します。お客さまの立ち会いが必要となります。
+回線廃止工事日の日程などについては、ご連絡いたします。
+
+いずれの廃止工事方法となるかは、GMO光アクセス解約申請後3日程度でメールにてご案内いたします。
+
+・派遣工事を行う場合、ご利用機器はNTT担当者が取り外しなどを行い、回収します。お客さまご自身で外したり、廃棄しないでください。
+・「IPoE（IPv6）オプション」「v6プラス」をご利用のお客さま
+GMO光アクセスの解約、または「v6プラス」「IPoE（IPv6）オプション」対象外の接続サービスへ変更をする場合、「v6プラス」「IPoE（IPv6）オプション」はあわせて解約となります。
+・GMO光アクセス」が解約となった翌日以降に自動的に解約されます。
+・自動解約の前に解約をご希望される場合はGMO光アクセス サポートセンターへご連絡ください。
+・「v6プラス」「IPoE（IPv6）オプション」解約後に適用対象外の接続サービスのコースをご利用の場合、インターネット接続サービスを利用できなくなることがあります。解約前または解約後速やかにPPPoE接続の設定（GMO光アクセス接続用IDとパスワードでの接続設定）をお願いします。
+※他社「IPoE接続サービス」をご利用になる場合は「v6プラス」「IPoE（IPv6）オプション」の解約手続きを行ってください。
+※「v6 プラス」は株式会社JPIXの商標です。</div></details>
+            <details class="border border-light-border rounded-lg bg-white"><summary class="list-none cursor-pointer p-5 flex justify-between items-center"><span class="font-semibold">他事業者へ変更する場合</span><span>▼</span></summary><div class="p-5 text-light-text-secondary whitespace-pre-line">・NTTの提供するオプションサービスについて、利用条件が変更になったり、サービスの全部もしくは一部がご利用いただけなくなる場合があります。
+・NTTの提供するオプションサービスをNTTと契約されている場合、変更先の光コラボレーション事業者へのお申し込み前に、必ずお客さまからNTTにご連絡ください。事前のご連絡がない場合、事業者変更の申し込みができません。
+・NTTのオプションサービスをGMO光アクセスでご利用のお客さまで、変更先の光コラボレーション事業者が当該オプションサービスを提供していない場合は、NTTとの直接契約となります。
+・事業者変更と同時にGMO光アクセスを解約する場合、事業者変更日の前暦日が属する月の末日に退会完了となります。退会完了月まで月額料金を含むすべての料金がかかります。</div></details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-12">お問い合わせ</h2>
+          <div class="max-w-4xl mx-auto grid gap-8">
+            <div class="bg-white rounded-lg p-6 shadow-sm border">
+              <h3 class="text-xl font-bold text-blue-600 mb-3">お申込から開通までのことについて</h3>
+              <p class="text-gray-600 mb-4">お申込手続きや工事日程、開通までの流れに関するお問い合わせ</p>
+              <a href="https://gmobb.jp/support/startguide/gmohikari/" target="_blank" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">GMOとくとくBBサポートセンター</a>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-sm border">
+              <h3 class="text-xl font-bold text-blue-600 mb-3">開通後の事務手続きやインターネットがつながらない等について</h3>
+              <p class="text-gray-600 mb-4">開通後のサポート、接続トラブル、各種変更手続きに関するお問い合わせ</p>
+              <a href="https://help.gmobb.jp/gmohikari/" target="_blank" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">GMOとくとくBBヘルプセンター</a>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-sm border">
+              <h3 class="text-xl font-bold text-blue-600 mb-3">クリプトニンジャひかりの運営や著作物などについて</h3>
+              <p class="text-gray-600 mb-4">サービス運営、コンテンツ、著作物に関するお問い合わせ</p>
+              <a href="https://x.com/ninjadaoplus" target="_blank" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">にんプラ公式アカウントへDM または Discordチャンネル</a>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-sm border">
+              <h3 class="text-xl font-bold text-blue-600 mb-3">トークンに関するシステムやユーザーごとの詳細確認などについて</h3>
+              <p class="text-gray-600 mb-4">FiNANCiEトークンシステム、ユーザー固有の問題に関するお問い合わせ</p>
+              <a href="https://support.financie.jp/hc/ja/requests/new" target="_blank" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">FiNANCiEサポート</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light-surface py-12 border-t border-light-border">
+      <div class="container mx-auto px-6 text-center text-light-text-secondary">
+        <div class="flex justify-center items-center space-x-8 mb-8 text-light-text">
+          <div class="font-bold text-lg">GMO</div>
+          <a href="https://financie.jp/" target="_blank" class="font-bold text-lg hover:text-light-primary">FiNANCiE</a>
+          <a href="https://x.com/ninjadaoplus" target="_blank" class="font-bold text-lg hover:text-light-primary">にんプラ(NinjaDAO Plus)</a>
+        </div>
+        <div class="flex justify-center space-x-6 mb-8">
+          <a href="https://internet.gmo/terms/privacy/" class="hover:text-light-primary">個人情報保護方針</a>
+          <a href="https://gmobb.jp/common/signup/pdf/gmohikari_agreement.pdf" class="hover:text-light-primary">利用規約</a>
+          <a href="https://gmobb.jp/tokusho/" class="hover:text-light-primary">特定商取引法</a>
+        </div>
+        <p class="mb-8"></p>
+        <div class="mt-8 flex justify-center">
+          <img src="img/logo_cryptoninja_hikari_1.webp" alt="クリプトニンジャひかり" class="h-16 object-contain" />
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Calculate tax display
+      function setTax(idRaw, idTax){
+        var raw = document.getElementById(idRaw); var tax = document.getElementById(idTax);
+        if(!raw||!tax) return; var v = parseInt(raw.textContent,10)||0; tax.textContent = Math.floor(v*1.1).toLocaleString('ja-JP');
+      }
+      setTax('price-mansion-raw','price-mansion-tax');
+      setTax('price-family-raw','price-family-tax');
+      setTax('price-10g-raw','price-10g-tax');
+
+      // Tabs
+      var tabBtns = document.querySelectorAll('.tab-btn');
+      var panels = document.querySelectorAll('.tab-panel');
+      tabBtns.forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var idx = this.getAttribute('data-tab');
+          tabBtns.forEach(function(b){ b.classList.remove('border-b-2','border-light-primary','text-light-primary'); b.classList.add('text-light-text-secondary'); });
+          this.classList.add('border-b-2','border-light-primary','text-light-primary');
+          panels.forEach(function(p){ p.classList.add('hidden'); if(p.getAttribute('data-panel')===idx){ p.classList.remove('hidden'); }});
+        });
+      });
+
+      // GMOひかりテレビ 価格切替（2025-12-01以降 new）
+      (function(){
+        var el = document.getElementById('hikari-tv-price'); if(!el) return;
+        var sw = new Date('2025-12-01T00:00:00Z'); var now = new Date();
+        el.textContent = (now >= sw) ? el.dataset.new : el.dataset.old;
+      })();
+    </script>
+  </body>
+</html>
